@@ -1,119 +1,270 @@
 <html>
-	<head>
-		<style>
-			.button{ padding: 10px 10px;
-				 font-size: 16px;
-				 font-family: "Times New Roman";
-                 		 width: 100%;
-				 cursor: pointer; }
-		</style>
-	</head>
-	<body bgcolor="#000000">
-		<table>
-			<tr>
-				<td><button class="button">UHF TUNE</button></td>
-				<td><button class="button">PDA</button></td>
-				<td><button class="button">ORD BAT ADD/DEL</button></td>
-				<td><button class="button">FLIGHT PLAN</button></td>
-				<td><button class="button">FLT PLN ADD/DEL</button></td>
-				<td><button class="button">FLT PLN ASC/DIS</button></td>
-				<td><button class="button">TRACK TD</button></td>
-				<td><button class="button">TD INDEX</button></td>
-			</tr>
-			<tr>
-				<td><button class="button">INIT SPCL PT</button></td>
-				<td><button class="button">RN/DES/NTN SD</button></td>
-				<td><button class="button">ORDER BAT SD</button></td>
-				<td><button class="button">SENSOR TRACKING</button></td>
-				<td><button class="button">AIRBASE WX TD</button></td>
-				<td><button class="button">ADD/DEL AIRBASE</button></td>
-				<td><button class="button">HARD COPY</button></td>
-				<td><button class="button">TD UPDATE</button></td>
-			</tr>
-			<tr>
-				<td><button class="button">RCT INIT TD</button></td>
-				<td><button class="button"></button></td>
-				<td><button class="button">RSTRCTD AREA</button></td>
-				<td><button class="button">OPNL COND TD</button></td>
-				<td><button class="button">PDS TD REQUEST</button></td>
-				<td><button class="button">PDS SD REQUEST</button></td>
-				<td><button class="button">CIRCLE</button></td>
-				<td><button class="button">BEARING-RANGE</button></td>
-			</tr>
-			<tr>
-				<td><button class="button">COMMAND</button></td>
-				<td><button class="button">AADCP OPTION</button></td>
-				<td><button class="button">ADA ENG STATUS</button></td>
-				<td><button class="button">DATA REQUEST</button></td>
-				<td><button class="button">RADAR ECM SD</button></td>
-				<td><button class="button">SEC/SUB SD</button></td>
-				<td><button class="button">LINE</button></td>
-				<td><button class="button">COORDS</button></td>
-			</tr>
-			<tr>
-				<td><button class="button">WILCO/CANTCO</button></td>
-				<td><button class="button">HANDOVR FREQ TD</button></td>
-				<td><button class="button">CONTROL UNTI TD</button></td>
-				<td><button class="button">FORCE TELL</button></td>
-				<td><button class="button"></button></td>
-				<td><button class="button">AADCP SD</button></td>
-				<td><button class="button">ARROW</button></td>
-				<td><button class="button">MESSAGE</button></td>
-			</tr>
-			<tr>
-				<td><button class="button">WT HANDOVR</button></td>
-				<td><button class="button">ACC/REJHANDVR</button></td>
-				<td><button class="button">CORRIDOR IF SD</button></td>
-				<td><button class="button">AREA MONITOR</button></td>
-				<td><button class="button">AREA DEF/DEL</button></td>
-				<td><button class="button">A/C DOWN</button></td>
-				<td><button class="button">DIALOG TEST</button></td>
-				<td><button class="button">ASSIGN CONSOLE</button></td>
-			</tr>
-			<tr>
-				<td><button class="button">MODE IV</button></td>
-				<td><button class="button">LOCATE SIF</button></td>
-				<td><button class="button">REFUEL SD/TD</button></td>
-				<td><button class="button">ARM UP/ORIDE</button></td>
-				<td><button class="button">MA/KILL</button></td>
-				<td><button class="button">INT L/R LINE SD</button></td>
-				<td><button class="button">TRK ALT ORIDE</button></td>
-				<td><button class="button">REQUEST SIF SD</button></td>
-			</tr>
-			<tr>
-				<td><button class="button">RCT MSN TD</button></td>
-				<td><button class="button">COMMAND TRKING</button></td>
-				<td><button class="button"></button></td>
-				<td><button class="button"></button></td>
-				<td><button class="button">RCT MOD CONTROL</button></td>
-				<td><button class="button">REQ/ASG IFF/SIF</button></td>
-				<td><button class="button">DROP</button></td>
-				<td><button class="button">ALL</button></td>
-			</tr>
-			<tr>
-				<td><button class="button">MANUAL GDNC</button></td>
-				<td><button class="button"></button></td>
-				<td><button class="button"></button></td>
-				<td><button class="button"></button></td>
-				<td><button class="button">RCVY AIRBASE</button></td>
-				<td><button class="button">ALTER CONTROL</button></td>
-				<td><button class="button">INIT</button></td>
-				<td><button class="button">OFF</button></td>
-			</tr>
-			<tr>
-				<td><button class="button">COMMIT</button></td>
-				<td><button class="button">MISSION</button></td>
-				<td><button class="button">CAP</button></td>
-				<td><button class="button">RTB</button></td>
-				<td><button class="button"></button></td>
-				<td><button class="button">ASSIGN/DEFER</button></td>
-				<td><button class="button">RE-INIT</button></td>
-				<td><button class="button">HOOK</button></td>
-			</tr>
-		</table>
-	</body>
-</html>
 
+              <head>
+
+                             <style>
+
+            .button { padding: 10px 10px;
+
+                                                           font-size: 16px;
+
+                                                           font-family: "Times New Roman";
+
+                                            width: 100%;
+
+                                                           cursor: pointer; }
+
+             body { color: #04FD1D;
+
+                                 font-weight: bold;
+
+                                font-size: 18px;
+
+                                 font-family: "Courier New" }
+
+                            </style>
+
+              </head>
+
+              <body bgcolor="#000000">
+
+                             <table>
+
+                                           <tr>
+
+                                                          <td><button class="button" onclick="UHF()">UHF<br>TUNE</button></td>
+
+                                                          <td><button class="button" onclick="PDA()"><br>PDA<br></button></td>
+
+                                                          <td><button class="button">ORD BAT ADD/DEL</button></td>
+
+                                                          <td><button class="button">FLIGHT PLAN</button></td>
+
+                                                          <td><button class="button">FLT PLN ADD/DEL</button></td>
+
+                                                          <td><button class="button">FLT PLN ASC/DIS</button></td>
+
+                                                          <td><button class="button">TRACK TD</button></td>
+
+                                                          <td><button class="button">TD<br>INDEX</button></td>
+
+                                           </tr>
+
+                                           <tr>
+
+                                                          <td><button class="button">INIT<br>SPCL PT</button></td>
+
+                                                          <td><button class="button">RN/DES/<br>NTN SD</button></td>
+
+                                                          <td><button class="button">ORDER BAT SD</button></td>
+
+                                                          <td><button class="button">SENSOR TRACKING</button></td>
+
+                                                          <td><button class="button">AIRBASE WX TD</button></td>
+
+                                                          <td><button class="button">ADD/DEL AIRBASE</button></td>
+
+                                                          <td><button class="button">HARD COPY</button></td>
+
+                                                          <td><button class="button">TD UPDATE</button></td>
+
+                                           </tr>
+
+                                           <tr>
+
+                                                          <td><button class="button">RCT<br>INIT TD</button></td>
+
+                                                          <td><button class="button"><br><br></button></td>
+
+                                                          <td><button class="button">RSTRCTD AREA</button></td>
+
+                                                          <td><button class="button">OPNL COND TD</button></td>
+
+                                                          <td><button class="button">PDS TD REQUEST</button></td>
+
+                                                          <td><button class="button">PDS SD REQUEST</button></td>
+
+                                                          <td><button class="button"><br>CIRCLE</button></td>
+
+                                                          <td><button class="button">BEARING-RANGE</button></td>
+
+                                           </tr>
+
+                                           <tr>
+
+                                                          <td><button class="button"><br>COMMAND</button></td>
+
+                                                          <td><button class="button">AADCP<br>OPTION</button></td>
+
+                                                          <td><button class="button">ADA ENG STATUS</button></td>
+
+                                                          <td><button class="button">DATA REQUEST</button></td>
+
+                                                          <td><button class="button">RADAR ECM SD</button></td>
+
+                                                          <td><button class="button">SEC/SUB<br>SD</button></td>
+
+                                                          <td><button class="button"><br>LINE</button></td>
+
+                                                          <td><button class="button"><br>COORDS</button></td>
+
+                                           </tr>
+
+                                           <tr>
+
+                                                          <td><button class="button">WILCO/<br>CANTCO</button></td>
+
+                                                          <td><button class="button">HANDOVR<br>FREQ TD</button></td>
+
+                                                          <td><button class="button">CONTROL UNIT TD</button></td>
+
+                                                          <td><button class="button">FORCE TELL</button></td>
+
+                                                          <td><button class="button"><br><br></button></td>
+
+                                                          <td><button class="button">AADCP<br>SD</button></td>
+
+                                                          <td><button class="button"><br>ARROW</button></td>
+
+                                                          <td><button class="button"><br>MESSAGE</button></td>
+
+                                           </tr>
+
+                                           <tr>
+
+                                                          <td><button class="button">WT HANDOVR</button></td>
+
+                                                          <td><button class="button">ACC/REJ<br>HANDVR</button></td>
+
+                                                          <td><button class="button">CORRIDOR IF SD</button></td>
+
+                                                          <td><button class="button">AREA MONITOR</button></td>
+
+                                                          <td><button class="button">AREA DEF/DEL</button></td>
+
+                                                          <td><button class="button">A/C<br>DOWN</button></td>
+
+                                                          <td><button class="button">DIALOG TEST</button></td>
+
+                                                          <td><button class="button">ASSIGN CONSOLE</button></td>
+
+                                           </tr>
+
+                                           <tr>
+
+                                                          <td><button class="button"><br>MODE IV</button></td>
+
+                                                          <td><button class="button">LOCATE SIF</button></td>
+
+                                                          <td><button class="button">REFUEL SD/TD</button></td>
+
+                                                          <td><button class="button">ARM UP/ORIDE</button></td>
+
+                                                          <td><button class="button"><br>MA/KILL</button></td>
+
+                                                          <td><button class="button">INT L/R<br>LINE SD</button></td>
+
+                                                          <td><button class="button">TRK&nbsp;ALT<br>ORIDE</button></td>
+
+                                                          <td><button class="button">REQUEST SIF SD</button></td>
+
+                                           </tr>
+
+                                           <tr>
+
+                                                          <td><button class="button">RCT MSN TD</button></td>
+
+                                                          <td><button class="button">COMMAND TRKING</button></td>
+
+                                                          <td><button class="button"><br><br></button></td>
+
+                                                          <td><button class="button"><br><br></button></td>
+
+                                                          <td><button class="button">RCT MOD<br>CONTROL</button></td>
+
+                                                          <td><button class="button">REQ/ASG IFF/SIF</button></td>
+
+                                                          <td><button class="button"><br>DROP</button></td>
+
+                                                          <td><button class="button"><br>ALL</button></td>
+
+                                           </tr>
+
+                                           <tr>
+
+                                                          <td><button class="button">MANUAL GDNC</button></td>
+
+                                                          <td><button class="button"><br><br></button></td>
+
+                                                          <td><button class="button"><br><br></button></td>
+
+                                                          <td><button class="button"><br><br></button></td>
+
+                                                          <td><button class="button">RCVY AIRBASE</button></td>
+
+                                                          <td><button class="button">ALTER CONTROL</button></td>
+
+                                                          <td><button class="button"><br>INIT</button></td>
+
+                                                          <td><button class="button"><br>OFF</button></td>
+
+                                           </tr>
+
+                                           <tr>
+
+                                                          <td><button class="button"><br>COMMIT</button></td>
+
+                                                          <td><button class="button"><br>MISSION</button></td>
+
+                                                          <td><button class="button"><br>CAP</button></td>
+
+                                                          <td><button class="button"><br>RTB</button></td>
+
+                                                          <td><button class="button"><br><br></button></td>
+
+                                                          <td><button class="button">ASSIGN/<br>DEFER</button></td>
+
+                                                          <td><button class="button"><br>RE-INIT</button></td>
+
+                                                          <td><button class="button"><br>HOOK</button></td>
+
+                                           </tr>
+
+                             </table>
+
+        
+
+        <!--writes the menu lines and TDs-->
+
+        <p id="menuLine"></p>
+
+        <p id="td"></p>     
+
+        
+
+        <!--sets each menu line and TD-->
+
+        <script>
+
+                             function UHF() {
+
+                                           document.getElementById("menuLine").innerHTML = "(NUM, \"A, R\", (\"T\"CSL)) <br>ARF: (ROID(\"F\"(NUM FREQ,OFF), (ALL OFF)),(CSL(\"A,B,C,D\")),OFF,\"T\"),(ALL OFF)+ <br>TUN: ((ROID\"I\",((OS)(FREQ)(MODE))),((\"I\")ALL),\"X\")</html>";}
+
+ 
+
+            document.getElementById("td").innerHTML = "<tr><td>UHF TUNE TD <br>CN#05 DA=D B <br>RADIO RT11 <br>F1 * 253400 <br>F2&nbsp;233800 <br>F3&nbsp;290900 <br>F4&nbsp;267500 <br>F5&nbsp;259300 <br>F6&nbsp;261200 <br><br>&ensp;ASSN FREQ <br>&nbsp; &nbsp; 253400</td><td>&nbsp; &nbsp; &nbsp; </td><td>UHF RADIO TD <br>D CN&nbsp;FREQ A <br>B 10 355125 <br>D 05 254300 <br><br><br><br><br><br><br><br><br></td></tr>";}
+
+ 
+
+                             function PDA() {
+
+                                           document.getElementById("menuLine").innerHTML = "PDA";}
+
+              </script>
+
+              </body>
+
+</html>
 
 
 <!--
