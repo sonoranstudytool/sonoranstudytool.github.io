@@ -1,6 +1,419 @@
-<html>
-   <body>
-      <h1>Hello World!!!</h1>
-      <p>This is Selena in Website Science class :D</p>
-   </body>
-</html>
+import javax.swing.*;
+import java.awt.*;
+import java.awt.event.ActionEvent;
+import java.awt.event.ActionListener;
+import javax.swing.JOptionPane;
+ 
+public class Sonoran extends JPanel implements ActionListener {
+    protected JButton UTN, PDA, OBU, BOX, ADD, AD, TRK, TDI, ISP, RNS, ORB, STR, ABW, BAS, HRD, UPD, RTI, 
+    				  XX1, RST, OPC, PTD, PSD, CIR, BR, CMD, AAD, ENG, DAT, RDE, SS, LIN, CRD, WC, HOQ, 
+    				  CTL, FRC, XX2, ACP, ARW, MSG, WTH, HO, COR, TKM, ARA, DWN, XX3, CSL, TMC, LSF, RFU, 
+    				  ARM, KIL, INT, TKO, SIF, RCT, CTK, XX4, XX5, MOD, RQI, DRP, ALL, GDN, XX6, XX7, XX8, 
+    				  ARB, ALC, WIN, OFF, CMT, MSN, CAP, RTB, XX9, ARD, WRN, HOK;
+    public int pos;
+    JTextField textField;
+ 
+    //buttons
+    public Sonoran() {   	
+        UTN = new JButton("UHF TUNE"); UTN.setActionCommand("UTN"); addOns(UTN);
+        PDA = new JButton("PDA"); PDA.setActionCommand("PDA"); addOns(PDA);
+        OBU = new JButton("ORD BAT ADD/DEL"); OBU.setActionCommand("OBU"); addOns(OBU);
+        BOX = new JButton("FLIGHT PLAN"); BOX.setActionCommand("BOX"); addOns(BOX);
+        ADD = new JButton("FLT PLN ADD/DEL"); ADD.setActionCommand("ADD"); addOns(ADD);
+        AD = new JButton("FLT PLN ASC/DIS"); AD.setActionCommand("AD"); addOns(AD);
+        TRK = new JButton("TRACK TD"); TRK.setActionCommand("TRK"); addOns(TRK);
+        TDI = new JButton("TD INDEX"); TDI.setActionCommand("TDI");addOns(TDI);
+        ISP = new JButton("INIT SPCL PT"); ISP.setActionCommand("ISP"); addOns(ISP);
+        RNS = new JButton("RN/DES/NTN SD"); RNS.setActionCommand("RNS"); addOns(RNS);
+        ORB = new JButton("ORDER BAT SD"); ORB.setActionCommand("ORB"); addOns(ORB);
+        STR = new JButton("SENSOR TRACKING"); STR.setActionCommand("STR"); addOns(STR);
+        ABW = new JButton("AIRBASE WX TD"); ABW.setActionCommand("ABW"); addOns(ABW);
+        BAS = new JButton("ADD/DEL AIRBASE"); BAS.setActionCommand("BAS"); addOns(BAS);
+        HRD = new JButton("HARD COPY"); HRD.setActionCommand("HRD"); addOns(HRD);
+        UPD = new JButton("TD UPDATE"); UPD.setActionCommand("UPD"); addOns(UPD);
+        RTI = new JButton("RCT INIT TD"); RTI.setActionCommand("RTI"); addOns(RTI);
+        XX1 = new JButton("___"); XX1.setActionCommand("XXX"); addOns(XX1);
+        RST = new JButton("RSTRCTD AREA"); RST.setActionCommand("RST"); addOns(RST);
+        OPC = new JButton("OPNL COND TD"); OPC.setActionCommand("OPC"); addOns(OPC);
+        PTD = new JButton("PDS TD REQUEST"); PTD.setActionCommand("PTD"); addOns(PTD);
+        PSD = new JButton("PDS SD REQUEST"); PSD.setActionCommand("PSD"); addOns(PSD);
+        CIR = new JButton("CIRCLE"); CIR.setActionCommand("CIR"); addOns(CIR);
+        BR = new JButton("BEARING-RANGE"); BR.setActionCommand("BR"); addOns(BR);
+        CMD = new JButton("COMMAND"); CMD.setActionCommand("CMD"); addOns(CMD);
+        AAD = new JButton("AADCP OPTION"); AAD.setActionCommand("AAD");addOns(AAD);
+        ENG = new JButton("ADA ENG STATUS"); ENG.setActionCommand("ENG"); addOns(ENG);
+        DAT = new JButton("DATA REQUEST"); DAT.setActionCommand("DAT"); addOns(DAT);
+        RDE = new JButton("RADAR ECM SD"); RDE.setActionCommand("RDE"); addOns(RDE);
+        SS = new JButton("SEC/SUB SD"); SS.setActionCommand("SS"); addOns(SS);
+        LIN = new JButton("LINE"); LIN.setActionCommand("LIN"); addOns(LIN);
+        CRD = new JButton("COORDS"); CRD.setActionCommand("CRD"); addOns(CRD);
+        WC = new JButton("WILCO/CANTCO"); WC.setActionCommand("WC"); addOns(WC);
+        HOQ = new JButton("HANDOVER FREQ TD"); HOQ.setActionCommand("HOQ"); addOns(HOQ);
+        CTL = new JButton("CONTROL UNIT TD"); CTL.setActionCommand("CTL"); addOns(CTL);
+        FRC = new JButton("FORCE TELL"); FRC.setActionCommand("FRC"); addOns(FRC);
+        XX2 = new JButton("___"); XX2.setActionCommand("XXX"); addOns(XX2);
+        ACP = new JButton("AADCP SD"); ACP.setActionCommand("ACP"); addOns(ACP);
+        ARW = new JButton("ARROW"); ARW.setActionCommand("ARW"); addOns(ARW);
+        MSG = new JButton("MESSAGE"); MSG.setActionCommand("MSG"); addOns(MSG);
+        WTH = new JButton("WT HANDOVER"); WTH.setActionCommand("WTH"); addOns(WTH);
+        HO = new JButton("ACC/REJ HANDVR"); HO.setActionCommand("HO"); addOns(HO);
+        COR = new JButton("CORRIDOR IFF SD"); COR.setActionCommand("COR"); addOns(COR);
+        TKM = new JButton("AREA MONITOR"); TKM.setActionCommand("TKM");addOns(TKM);
+        ARA = new JButton("AREA DEF/DEL"); ARA.setActionCommand("ARA"); addOns(ARA);
+        DWN = new JButton("A/C DOWN"); DWN.setActionCommand("DWN"); addOns(DWN);
+        XX3 = new JButton("DIALOG TEST"); XX3.setActionCommand("XXX"); addOns(XX3);
+        CSL = new JButton("ASSIGN CONSOLE"); CSL.setActionCommand("CSL"); addOns(CSL);
+        TMC = new JButton("MODE IV"); TMC.setActionCommand("TMC"); addOns(TMC);
+        LSF = new JButton("LOCATE SIF"); LSF.setActionCommand("LSF"); addOns(LSF);
+        RFU = new JButton("REUEL SD/TD"); RFU.setActionCommand("RFU"); addOns(RFU);
+        ARM = new JButton("ARM UP/ORIDE"); ARM.setActionCommand("ARM"); addOns(ARM);
+        KIL = new JButton("MA/KILL"); KIL.setActionCommand("KIL"); addOns(KIL);
+        INT = new JButton("INT L/R LINE SD"); INT.setActionCommand("INT"); addOns(INT);
+        TKO = new JButton("TRK ALT ORIDE"); TKO.setActionCommand("TKO"); addOns(TKO);
+        SIF = new JButton("REQUEST SIF SD"); SIF.setActionCommand("SIF"); addOns(SIF);
+        RCT = new JButton("RCT MSN TD"); RCT.setActionCommand("RCT"); addOns(RCT);
+        CTK = new JButton("COMMAND TRKING"); CTK.setActionCommand("CTK"); addOns(CTK);
+        XX4 = new JButton("___"); XX4.setActionCommand("XXX"); addOns(XX4);
+        XX5 = new JButton("___"); XX5.setActionCommand("XXX"); addOns(XX5);
+        MOD = new JButton("RCT MOD CONTROL"); MOD.setActionCommand("MOD"); addOns(MOD);
+        RQI = new JButton("REQ/ASG IFF/SIF"); RQI.setActionCommand("RQI");addOns(RQI);
+        DRP = new JButton("DROP"); DRP.setActionCommand("DRP"); addOns(DRP);
+        ALL = new JButton("ALL"); ALL.setActionCommand("ALL"); addOns(ALL);
+        GDN = new JButton("MANUAL GDNC"); GDN.setActionCommand("GDN"); addOns(GDN);
+        XX6 = new JButton("___"); XX6.setActionCommand("XXX"); addOns(XX6);
+        XX7 = new JButton("___"); XX7.setActionCommand("XXX"); addOns(XX7);
+        XX8 = new JButton("___"); XX8.setActionCommand("XXX"); addOns(XX8);
+        ARB = new JButton("RCVY AIRBASE"); ARB.setActionCommand("ARB"); addOns(ARB);
+        ALC = new JButton("ALTER CONTROL"); ALC.setActionCommand("ALC"); addOns(ALC);
+        WIN = new JButton("INIT"); WIN.setActionCommand("WIN"); addOns(WIN);
+        OFF = new JButton("OFF"); OFF.setActionCommand("OFF"); addOns(OFF);
+        CMT = new JButton("COMMIT"); CMT.setActionCommand("CMT"); addOns(CMT);
+        MSN = new JButton("MISSION"); MSN.setActionCommand("MSN"); addOns(MSN);
+        CAP = new JButton("CAP"); CAP.setActionCommand("CAP"); addOns(CAP);
+        RTB = new JButton("RTB"); RTB.setActionCommand("RTB"); addOns(RTB);
+        XX9 = new JButton("___"); XX9.setActionCommand("XXX"); addOns(XX9);
+        ARD = new JButton("ASSIGN/DEFER"); ARD.setActionCommand("ARD"); addOns(ARD);
+        WRN = new JButton("RE-INIT"); WRN.setActionCommand("WRN"); addOns(WRN);
+        HOK = new JButton("HOOK"); HOK.setActionCommand("HOK"); addOns(HOK);
+    }
+    
+    //adds button to panel
+    public void addOns(JButton b)
+    {
+    	b.addActionListener(this);
+    	add(b);
+    }
+    
+    //menu lines
+    public void actionPerformed(ActionEvent e) 
+    {
+    	JLabel label = new JLabel();
+    	JLabel label2 = new JLabel();
+    	
+    	if ("UTN".equals(e.getActionCommand())) {
+    		label.setText("<html>(NUM, \"A, R\", (\"T\"CSL)) <br>ARF: (ROID(\"F\"(NUM FREQ,OFF), (ALL OFF)),(CSL(\"A,B,C,D\")),OFF,\"T\"),(ALL OFF)+ <br>TUN: ((ROID\"I\",((OS)(FREQ)(MODE))),((\"I\")ALL),\"X\")</html>");
+    		label2.setText("<html><tr><td>UHF TUNE TD <br>CN#05 DA=D B <br>RADIO RT11 <br>F1 * 253400 <br>F2&nbsp;233800 <br>F3&nbsp;290900 <br>F4&nbsp;267500 <br>F5&nbsp;259300 <br>F6&nbsp;261200 <br><br>&ensp;ASSN FREQ <br>&nbsp; &nbsp; 253400</td><td>&nbsp; &nbsp; &nbsp; </td><td>UHF RADIO TD <br>D CN&nbsp;FREQ A <br>B 10 355125 <br>D 05 254300 <br><br><br><br><br><br><br><br><br></td></tr></html>");
+    	} else if ("PDA".equals(e.getActionCommand())) {
+            label.setText("<html>PD+:(\"P\"((\"50,80,120,160,200,250,350,450\",\"C\")SIZ*(ALT) <br>(INC)),OFF)+ <br>PD-:(\"P\"((\"-50,-80,-120,-160,-200,-250,-350,-450\",\"C\")SIZ* <br>(ALT)(INC)),OFF)+ <br>TEST: \"G\"(OFF)</html>");
+            //label2.setText("");
+    	} else if ("OBU".equals(e.getActionCommand())) {
+            label.setText("<html>CREATE: (DES)HOK,CUR,CRD,(\"T\"TRK)\"F,E\"T ST R*(ALT*,\"A\"EALT)(RMK*---)+ <br>DELETE: DES,HOK\"D\"+ <br>MODIFY: DES,HOK\"M\"(DES)(HOK,CRD)\"F,E\"*T*ST*R*(ALT*,\"A\"EALT,\"N\")(RMK*---)+ <br>MODIFY SLAVED: DES,HOK\"M\"(DES)(HOK,CRD,(\"T\"TRK))\"F,E\"*T*ST*R*(RMK*---)+ <br>TD: DES,HOK &nbsp; &nbsp; DMPI: \"DM\"TRK(\"D\")((\"A,R\")TRK---)</html>");
+            label2.setText("<html><tr><td>ORDER OF BATTE TD <br>&ensp;OOB 01234 A <br>&ensp;SA80&nbsp;J+ <br>2E SS SA8 <br>&ensp;E500 <br>&ensp;N2654.3030 <br>W03852.3030 <br>6RNG&nbsp;8 <br>&ensp;REMARKS <br>8ACTIVE <br>9MOVING <br>A <br>B </td><td>&nbsp;&nbsp; &nbsp; &nbsp;</td><td>DMPI ASSOCIATION TD <br>DM BD 1A <br>1 00167 <br>05T1728 <br>FW00263 <br>400321+ <br>500436+ <br>600530+ <br>700544+ <br>802662- <br>9 <br>A <br>B </td></tr></html>");
+        } else if ("BOX".equals(e.getActionCommand())) {
+    		label.setText("((FP#,(\"V\"VCS),TRK(\"R,C,O\")(OFF)),(TRK\"F\"),((\"O\")OFF))");
+    		//label2.setText("");
+        } else if ("ADD".equals(e.getActionCommand())) {
+            label.setText("((FP#,(\"V\"VCS)(TIME OFF)),TRK)");
+           //label2.setText("");
+        } else if ("AD".equals(e.getActionCommand())) {
+        	label.setText("(FP#,(\"V\"VCS)TRK,OFF),(OFF TRK)");
+        	label2.setText("<html><tr><td>1</td><td>2</td></tr><tr><td>3</td><td>4</td></tr></html>");
+        } else if ("TRK".equals(e.getActionCommand())) {
+    		label.setText("<html>TD: (\"AP\",(\"X,A,T,J,D,L,S,P,W,R,B,G,N\")TRK) &nbsp; &nbsp; HARDCOPY: \"H\"TRK(PER)(OFF)+ <br>EWI: \"I\"(\"P,X,D\",NET,ALL)TRK &nbsp; &nbsp; QUICK: \"Q\"(AZ,HOK,\"\")+ <br>HISTORY: \"TH\"((TRK)\"R\",(TIM),OFF),(ALL,OFF)</html>");
+    		label2.setText("<html><tr><td>&nbsp; &nbsp; &nbsp; &nbsp; IDENTIFICATION TD <br>&nbsp;2201C1R1L1B | &nbsp;2201G W+L2B | &nbsp; 2201 &nbsp; &nbsp;3B <br>&nbsp;02201R -25 &nbsp;| &nbsp;02201D &nbsp;A6 &nbsp;| M5@ V R <br>&nbsp;02201 &nbsp;ADQ &nbsp;| &nbsp;02201LRJ12 &nbsp;| ??DIF <br>AFBNS &nbsp; JDQ &nbsp;| AFBNS &nbsp; FDQ &nbsp;| NATIONALUSA <br>AFBNS &nbsp; TB &nbsp; | 3012N09730W &nbsp;| ORIGUSA <br>H250 T SU24 &nbsp;| H250 1 &nbsp; &nbsp; &nbsp; | <br>A244RNIRAN &nbsp; | A244 &nbsp; &nbsp; &nbsp; &nbsp; | PLATFORM ID <br>S 495SELN01 &nbsp;| S 4952 &nbsp; &nbsp; &nbsp; | NO.12345 <br>1 &nbsp; &nbsp; &nbsp; BUB &nbsp;| 4 N &nbsp; &nbsp; &nbsp; &nbsp; &nbsp;| <br>2 &nbsp; &nbsp; &nbsp; 4N &nbsp; | &nbsp; &nbsp; &nbsp;3 &nbsp; &nbsp; &nbsp; | ENCRYPTED <br>3 &nbsp; &nbsp; &nbsp; 5&nbsp; &nbsp; | 5 &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp;| M1 77777 <br>3012N09730W &nbsp;| R &nbsp;-25E &nbsp;-7 &nbsp|</td><td>&nbsp; &nbsp; &nbsp; </td>"
+    				     + "<td>SPECIAL POINT TD <br>P06333 &nbsp;PI1B <br>LTGT1 &nbsp; C10 <br>H &nbsp; &nbsp; &nbsp;J-E3 <br>A &nbsp; &nbsp; &nbsp; - <br>S &nbsp; &nbsp; &nbsp;A-E3  <br>LHCYNS X A <br>UC&nbsp; &nbsp; &nbsp;R <br>1 &nbsp; &nbsp; &nbsp;L <br>2 &nbsp; &nbsp; P <br>3 &nbsp; &nbsp;B <br>4 5 &nbsp;TM1405 <br>2934N08722W </td><td>&nbsp; &nbsp; &nbsp; </td>"
+       		             + "<td>LOCAL TRACK SIF CODES TD <br>&nbsp;LN01 1C | LN01 &nbsp;2C <br>M1 73 &nbsp; &nbsp;| M5@ V R <br>0:10 &nbsp; &nbsp; |<br>M2@2231 &nbsp;| NATION <br>OLD &nbsp;M &nbsp; |<br>&nbsp; &nbsp; &nbsp; &nbsp; &nbsp;|<br>M3 3030 &nbsp;| PIN <br>0:00 &nbsp; &nbsp; | 12345 <br>&nbsp; &nbsp; &nbsp; &nbsp; &nbsp;|<br>M4 &nbsp;V &nbsp; &nbsp;| ENCRYPT <br> &nbsp; &nbsp; &nbsp; &nbsp; &nbsp;| M1 7777 <br>P @1234 &nbsp;|</td></tr>"
+	                     + "<br>&nbsp;<tr><td> &nbsp; &nbsp; &nbsp; &nbsp; EW/I TD <br>&nbsp;-LN01 &nbsp; L1C | E- LN01 &nbsp;L2C <br>1+NAL &nbsp;IRAQ &nbsp;| 1*SP-MIG21@ <br>2+CG+ A/F-I &nbsp;| 2 TTP AIR <br>3+SP &nbsp; MG23 &nbsp;| 3 TWP <br>4+MSN &nbsp; ENG &nbsp;| 4 TFL <br>5+OPS &nbsp;ABLE &nbsp;| 5 MIS1 <br>6+ACT &nbsp;ARM &nbsp; | 6 MIS2 <br>7 CU &nbsp; &nbsp; &nbsp; &nbsp; | 7 MIS3 <br>8 OB &nbsp;20601 &nbsp;| <br>&nbsp;TIME &nbsp;1214 &nbsp;| &nbsp;TIME &nbsp;1214 <br>&nbsp;FD/N &nbsp;RJ/J &nbsp;| &nbsp;FD/N &nbsp;E3/J <br>&nbsp;NET J+I-A- &nbsp;| &nbsp;NET J+I-A- </td><td>&nbsp; &nbsp; &nbsp; </td>"
+	                     + "<td>PRIMARY E-3 TRACK TD <br>&nbsp;E-3A &nbsp;B <br>PU# 056 <br>FDBBQ15 <br>HDGT330 <br>ALT 289 <br>SPD 370 <br>RL L104 <br>PT +005 <br>&nbsp;2834N <br>08705W <br>HDGM332 <br><br></td><td>&nbsp; &nbsp; &nbsp; </td>"
+	                     + "<td>AUGMENTED E-3 TRACK TD <br>0E3 CS &nbsp; &nbsp; B<br>&nbsp;E3 JU00001 <br>&nbsp;H103 PQ 0+ <br>&nbsp;A290 P 000 <br>&nbsp;S360 R000 <br>5R-224I- 99 <br>6FT-EM-EX <br>7PLTAE OPOK <br>8TIME 1219T <br>&nbsp;VA &nbsp;0 B &nbsp;0 <br>&nbsp;CC &nbsp;0 NTR <br>3102N08520W </td><td>&nbsp; &nbsp; &nbsp; </td></tr></html>");
+
+        } else if ("TDI".equals(e.getActionCommand())) {
+            label.setText("<html>INDIV: (TDID---)(AR,((CPY)(OFF)),(PDS,SITE,(\"T\"TSF),P# <br>(CPY)))+ <br>REQ: ((AR)D# (INPUT)) GROUP: ALL,AR AR,((CPY)(OFF))</html>");
+            label2.setText("<html><tr><td>&nbsp; &nbsp; &nbsp; TD INDEX <br>TAB DISPLAY/INDEX &nbsp; &nbsp; &nbsp; 19A<br>78 TJ TIM SLT UP &nbsp;\"J\" \"TS\" <br>&nbsp;&nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp;(MSG#, \"A\") <br>65 TJ UNITS &nbsp; &nbsp; &nbsp; \"U\" <br>68 TP OVERRIDES &nbsp; \"V\" <br>&nbsp;6 TRACK &nbsp; &nbsp; &nbsp; &nbsp; &nbsp;((\"X.A.T.L\")) <br>&nbsp;&nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp;TRK) <br>17 TRK MOD CTL &nbsp; &nbsp;TRK <br>&nbsp;6 TRK TO TGT &nbsp; &nbsp; \"G\" TRK <br>67#UHF FREQ <br>74 UHF RADIO <br><br><br><br><br><br><br><br><br><br><br><br></td><td>&nbsp;&nbsp; &nbsp; &nbsp;</td>"
+            		     + "<td>&nbsp; &nbsp; &nbsp; &nbsp; &nbsp; TD67 UHF RADIOS <br>&nbsp;UHF RADIO FREQ ASSIGNMENT &nbsp; &nbsp; A <br>&nbsp; C ROID S ASSNFQ &nbsp;MOD USE &nbsp;CSL <br>2 &nbsp; T01 &nbsp;S 364200K NAM AICC <br>3 &nbsp; R02 &nbsp;S 364200K NAM AICC <br>4 &nbsp; T03 &nbsp;S 323600K NAM ATC <br>5 &nbsp; R04 &nbsp;S 323600K NAM ATC <br>6 &nbsp; T05 &nbsp;S 288200K DTX TADA <br>7 &nbsp; R06 &nbsp;S 288200K DTX TADA <br>8 &nbsp; RT07 C 254475K NAM SATC <br>9 &nbsp; RT08 H 375725K NAM FMT7 <br>A S RT09 S 296650K NAM CTRL <br>B &nbsp; RT10 S 317950K NAM VT1 <br>C S RT11 S 261200K NAM TUNE 05 <br>D &nbsp; RT12 S 243000K NAM GARD "
+            		     + "<br>E &nbsp; R13 &nbsp;S 243000K ADF GARD <br>F &nbsp; RT14 S 303100K NAM TUNE 07 <br>G &nbsp; RT15 H 376025K NAM FMT4 <br>H S RT16 S 225875K NAM CTRL <br>I S RT17 S 237150K NAM CTRL <br>J &nbsp; RT18 S 292600K NAM <br>K &nbsp; RT19 S &nbsp; &nbsp; &nbsp; &nbsp; NAM FLDK <br>L &nbsp; RT20 S 341750K NAM ATOD </tr></html>");
+        } else if ("ISP".equals(e.getActionCommand())) {
+            label.setText("<html>INIT: (\"SIM\")(DLRN)(SRN)(TN)(CRD,HOK,TRK (CUR)),CUR(\"B\"BR RG)(TKD)+ <br>(ID)(I)\"T\",(\"S\"SPC)(\"Y\"RAD)(H*(\"N\")(A(\"UA\"A2),(\"E\"E(\"H\"E)))*S*C*)+ <br>(TF)(T)(\"P\"PER)(\"A\"PA)(\"Q\"TQ)+ <br>REINT: SPT\"R\"(CRD,HOK,TRK)(CUR)(\"B\"BR RG)(TKD)(ID)(I)\"T\",+ <br>(\"S\"SPC)(\"Y\"RAD)(H*(\"N\")(A(\"UA\"A2),(\"E\"E(\"H\"E)))*S*C*)+ <br>(TF)(T)(\"P\"PER)(\"A\"PA)(\"Q\"TQ)+ <br>DEL/CON: SPT\"D\",(\"C\"(DLRN)(SRN)(TN))+ <br>MONITOR LAND TGT: TRK \"M\"</html>");
+            label2.setText("NO TD -> SEE TRACK TD");
+        } else if ("RNS".equals(e.getActionCommand())) {
+    		label.setText("<html>PDS/TRK: TK,(\"P\"RPT,XRPT)(\"T,D,N,S,J\",OFF) &nbps; &nbsp; DELETE: \"T,D,N,S,J\", ALL OFF+ <br>CIRCLE: (\"X,L,B\")HOK HOK(\"N,S,J\") &nbsp; &nbsp; MARK POINT: \"M\" &nbsp; &nbsp; 9VCS: TRK \"V\"+ <br>FIND WEAPON: \"W\" (ARM,\"F\") CUR &nbsp; &nbsp;  NET WPN: TRK(\"NW\"(\"A\")(OFF)),\"NW\" OFF</html>");
+    		label2.setText("NO TD");
+        } else if ("ORB".equals(e.getActionCommand())) {
+            label.setText("<html>OOB: \"S\",(DES,HOK,((\"F,E\")(TYP(SUBTYP))(\"T\"))(\"A\"))(OFF)+ <br>DMPI: \"DM\"(TRK)(\"B\")(ALL)(OFF) &nbsp; &nbsp; TMD: \"B\"TRK,ALL,\"F,E\"(\"L,A,B\")(OFF)</html>");
+            label2.setText("NO TD");
+        } else if ("STR".equals(e.getActionCommand())) {
+        	label.setText("<html>TRK: TRK((\"R,B,D,H\"(\"S,B\")),(\"I,A,F,P,Z\"),(\"J\"(OFF)),+ <br>(\"U\"(\"R,I,B\",OFF))) &nbsp; &nbsp; PDS: TRK\"M\"(\"L\")((RPT(\"O\")),OFF)</html>");
+            //label2.setText("");
+        } else if ("ABW".equals(e.getActionCommand())) {
+        	label.setText("ABID,HOK(\"S,M\")");
+            //label2.setText("");
+        } else if ("BAS".equals(e.getActionCommand())) {
+        	label.setText("((\"I\"ICAO)TRK((ELV*RHDG),OFF)),(\"I\"ICAO OFF)");
+            //label2.setText("");
+        } else if ("HRD".equals(e.getActionCommand())) {
+        	label.setText("NO MENU LINE");
+        	label2.setText("NO TD");
+        } else if ("UPD".equals(e.getActionCommand())) {
+    		label.setText("((TDID,R#(VALUE,\"*\")---)(ALL)");
+    		label2.setText("NO TD");
+        } else if ("RTI".equals(e.getActionCommand())) {
+        	label.setText("(ICAO,HOK,\"G\")");
+            //label2.setText("");
+        } else if ("RST".equals(e.getActionCommand())) {
+    		label.setText("<html>CREATE: DES(\"G,Y,R,B\")HOK---,CRD---(\"O\")(\"M\"REM) &nbsp; &nbsp; DISP/OFF: (DES---)(OFF)+ <br>DELETE: DES---\"D\" &nbsp; &nbsp; MODIY: DES(\"G,Y,R,B\")(DES)(\"M\"REM) &nbsp; &nbsp; TD: (DES)\"T\"+ <br>DES/RMK: \"S,H\"(DES---)(\"D,M,B\")+ <br>KB CREATE: \"K\"(CRD NM LT(INC)),(KB,(HOK(SG))\"G,Y,R,B)\")+ <br>KB DEL: \"K\"(ALL,KB,(HOK(SG)))\"D\"+ <br>KB DSP: \"K\"(\"GRD\",KB,(HOK(SG))(\"P\",OFF)),(OFF) &nbsp; &nbsp; KB TD: \"K\"KB,(HOK(SG))\"T\"+ <br>GARS CREATE: \"G\" GKB,(HOK,CRD (QUAD(KEY))) \"G,Y,R,B\"+ <br>GARS DEL: \\\"G\\\" GKB,(HOK,CRD (QUAD(KEY))) \"D\" &nbsp; &nbsp; GARS DEL ALL: \"G\" ALL \"D\"+ <br>GARS DSP: \\\"G\\\" GKB,(HOK,CRD (QUAD(KEY))) (\"P\",OFF)+ <br>GARS TD: \\\"G\\\" GKB,(HOK,CRD (QUAD(KEY))) \"T\"</html>");
+            label2.setText("<html><tr><td>RESTRICTED AREA TD <br>0&nbsp;AOR CG&nbsp;C <br>1RSC-FL500 <br>23252N12830W <br>33252N12800W <br>43148N12800W <br>53252N12830W <br>6 <br>7 <br>8 <br>9 <br>A <br>B </td><td>&nbsp; &nbsp; &nbsp; </td><td>KILLBOX TD <br>0002ab&nbsp;G A <br>1SURF-FL230 <br>2POISON 06 <br>3MAROON5 <br>4CW11 FL210 <br>5HT31 19-20 <br>6HG51 16 <br>7 <br>8 <br>9 <br>A <br>B </td></tr></html>");
+        } else if ("OPC".equals(e.getActionCommand())) {
+        	label.setText("NO MENU LINE");
+            //label2.setText("");
+        } else if ("PTD".equals(e.getActionCommand())) {
+        	label.setText("<html>REPORT: \"R\"RPT(\"B,A,T\") &nbsp; &nbsp; LCK/TRI: \"L,T,V\"RPT(OFF)+ <br>LIB: (\"E\"PDS(RPT)),((\"P,EP\")PDS),+ <br>MULT: (\"M\" PDS,(\"F\"FRQ(FRQE)),(\"P\"PRT),(\"I\"PRI(PRIE)),(\"R\"))+ <br>TD: \"A,C,D,F,G,I,L,NS,O,S,U,W,Y\",R#,\"H\"RPT+ <br>COMM: \"X\"(XRPT,\"J,I,A\") <br>QUICK RING: \"Q\" R#,HOK &nbsp; &nbsp; QUICK WEDGE: \"Q\" \"W,H,F,U,C\"(HOK)+ <br>TSF: (\"TF\"(RPT)),(\"TS\"(TSF,\"G,S,M\",SITE)),(\"TM\"TSF)</html>");
+            //label2.setText("");
+        } else if ("PSD".equals(e.getActionCommand())) {
+        	label.setText("<html>RING: R#(IN)(TYP)(ENV)(ID)(\"T,NT\")PDS*((HOK,HOK),(AZS,AZE),TRK)AM*(CR)(PR)+ <br>(RNG,HOK)(\"A,N\")+ <br>BEAR: \"L\"(TYP)(ENV)(ID)(\"T,NT\")PDS*(\"F\"FRQ*FRQE*)+ <br>((HOK HOK),(AZS AZE),TRK)AM*(CR)(PR)(RNG,HOK)(\"P,R,A,N,D\")+ <br>INDV: \"L\"\"ST\",(\"P\"RPT)(\"D\") &nbsp; &nbsp; HILIGHT: \"H\"R# PDS*(FRQ FRQ)+ <br>SITE: \"TS\"((\"P\"RPT),SITE(\"D\")),((\"A,R,B\")(PDS)(PR)(\"M\"(\"D\")))+ <br>XTOLD: \"X\"((FCL)STRT*(RNG,HOK)(\"A,N\")),(\"P\"XRPT(\"D\"))+ <br>DISP: (\"X\"(FCL,ALL))R#,(\"L\"(ALL)),(\"H\"R#),(\"TS\"(ALL))\"D,O\",OFF+ <br>HISTORY: \"HS\"RPT(OFF)</html>");
+            //label2.setText("");
+        } else if ("CIR".equals(e.getActionCommand())) {
+            label.setText("CIRCLE: ((CRD,HOK((\"K\")RAD),CUR(ALL)(OFF)),OFF)+ \nVLG: \"V\"((AXIS*ARC*RNG*RNG)(\"N\")),OFF");
+            label2.setText("NO TD");
+        } else if ("BR".equals(e.getActionCommand())) {
+            label.setText("((\"S\")OFF),((\"T\",OFF)((\"P\"(TKD(HOK)),HOK),TRK,\"E\")---)");
+            label2.setText("<html>BEARING AND RANGE TD <br>&nbsp;FROM &nbsp; TO &nbsp; &nbsp;BRG RNG A<br>A234 &nbsp; GULF &nbsp; 175 112 <br>IP04 &nbsp; IP05 &nbsp; 045 &nbsp;80 <br>HG02 &nbsp; A345 &nbsp; 360 152 <br>00001 &nbsp; &nbsp; &nbsp; &nbsp; 012 177 </html>");
+        } else if ("CMD".equals(e.getActionCommand())) {
+        	label.setText("((CMD(FCL(\"J,I,A\")),(ALL(NET))(TRK(TRK))),(NUM, ALL OFF))");
+            //label2.setText("");
+        } else if ("AAD".equals(e.getActionCommand())) {
+        	label.setText("AADCP(OFF,\"D\",(\"A\"(CRD,HOK)(TYP)AR*(DR)))");
+            //label2.setText("");
+        } else if ("ENG".equals(e.getActionCommand())) {
+        	label.setText("STATUS AADCP(RN TRK(#KL))");
+            //label2.setText("");
+        } else if ("DAT".equals(e.getActionCommand())) {
+        	label.setText("<html>(FCL(NET)),(TRK((\"T\"(\"S\")),(\"J\"(\"B\")),(FCL(\"B\")))) <br>RELIEF H/O: \"H\"((\"R\")FCL),OFF</html>");
+            //label2.setText("");
+        } else if ("RDE".equals(e.getActionCommand())) {
+        	label.setText("((RAD)(\"A,B\"))OFF");
+            //label2.setText("");
+        } else if ("SS".equals(e.getActionCommand())) {
+            label.setText("(ALL,OFF,(\"P\"(OFF)),(\"T\"(OFF)))");
+            //label2.setText("");
+        } else if ("LIN".equals(e.getActionCommand())) {
+    		label.setText("<html>((\"B\",((\"G,Y,R)CRD,\"O\",HOK)CRD,CUL(ALL)(OFF)),(\"Z\"CRD,CUR,OFF),OFF)+ <br>MIF/LO: \"T\"(\"A\"(OFF)),(ALL(OFF)),(TRK(OFF))</html>");
+    		label2.setText("NO TD");
+        } else if ("CRD".equals(e.getActionCommand())) {
+        	label.setText("(\"C,L,U,G,E,N\")CUR,CRD((\"B\"BRG RNG),(\"T\" \"C,L,U,G,E,N\"))");
+            label2.setText("<html>COORDINATES TD <br>COORD CVRSN &nbsp;B <br>INPUT <br>LAT-LONG <br>2800N <br>084 00W <br><br>OUTPUT <br>UTM <br>17RKB0501 </html>");
+        } else if ("WC".equals(e.getActionCommand())) {
+        	label.setText("(TRK((\"W\")(VFQ,\"N,A\")(CC*M3)),\"C\",(\"M\"(\"W,C\"))),(CMD(\"W,C\"))");
+            //label2.setText("");
+        } else if ("HOQ".equals(e.getActionCommand())) {
+        	label.setText("TRK");
+            //label2.setText("");
+        } else if ("CTL".equals(e.getActionCommand())) {
+        	label.setText("(\"B\")TRK");
+            //label2.setText("");
+        } else if ("FRC".equals(e.getActionCommand())) {
+        	label.setText("<html>TRK: (TRK(NET,\"E\")(OFF)),(TRK\"H\")+ <br>PDS: \"P\"RPT,XRPT,ALL\"E\",((\"B,T\")(\"X,1\")(NET))(\"L\",OFF)+ <br>THRT: TRK\"W\"(OFF)\"W,Y,R\",((TRK)(STR*TYP*WEP*TFL*PST))+ <br>E-3: \"EM,FT\"(OFF) &nbsp; &nbsp; TELL/NO TELL: \"N,X\"((TRK(OFF)),(ALL OFF))+ <br>HINT: \"HI\"((TRK TRK(OFF))(TRK(ALL(OFF))(\"M\"TRK)(ALL OFF)))</html>");
+            //label2.setText("");
+        } else if ("ACP".equals(e.getActionCommand())) {
+        	label.setText("(AADCP)(OFF)");
+            //label2.setText("");
+        } else if ("ARW".equals(e.getActionCommand())) {
+            label.setText("<html>LCL: CSL---,\"S,W,E\",ALL(\"M\"MSG)CUR+ <br>RMT MULT: FCL---(\"S,W,E\")(\"M\"MSG)CUR  RMT TRK: TRK(\"S,W,E\")(\"M\"MSG) CUR+ <br>RMT UNIT: FCL(\"J,I,A\")(\"S,W,E\")(\"M\"MSG)CUR  J12.6 PTR: \"R\" (TRK) CUR+ <br>J7.3 ALL: (\"J\" ALL(\"S,W,E\")(\"M\"MSG)CUR)+ <br>HACK: \"H\" (NUM (\"T\"*(TIM)(\"P\"PER))(ALL,CSL---,\"S,W,E\")(\"M\"(MSG))(OFF))</html>");
+            label2.setText("<html>ARROW -> TIME HACK TD <br>&nbsp;TIME HACK <br>&nbsp; &nbsp; &nbsp;POST PER &nbsp;CSL MESSAGE TEXT <br>2 T1 0900 0000 ALL*OFF STATION <br>3 &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp;IN 30 MIN <br>4 T2 0830 0100 SUR*SWAP AST/ADR <br>5 &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp;SENT EACH HR <br>6 T3 1200 0010 14 &nbsp;TO INFINITY <br>7 &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp;AND BEYOND <br>8 T4 1444 0000 WEP ECO LOWDOWN <br>9 &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp;IN 1 MIN <br>A T5 1500 0000 &nbsp; &nbsp; *CHECK OVEN 2 <br>B &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp;FOR COOKIES</html>");
+        } else if ("MSG".equals(e.getActionCommand())) {
+            label.setText("<html>QUICK FTM: (FCL,TRK) \"Q\" (MSG)  --  FTM POP-UP: \"P\" MSG#+ \nCONSOLE: (\"S,W,E\",CSL---,ALL MSG) &nbsp; &nbsp; FTM TEMPLATE: \"T\" TMPL#+ <br>(\"M\"((ALL OFF),(MSG#(ALL OFF,\"X,E,K\",OWA,\"H\",(ALL,FCL,TRK(\"J,I\"))))))+ <br>LOGGING: \"C,L\" (OFF,\"O\",\"M\",\"D\"ALL)</html>");
+            label2.setText("<html>TACTICAL ACTION LOG TD <br>TIME CN# S/A &nbsp;TRK1 OPTN &nbsp;TRK2 I LAT/LONG/AZ NATL TYP L+ 1A <br>0030 AS1 AFS <br>0035 WD5 ALC &nbsp;EE01 &nbsp; &nbsp;F &nbsp; &nbsp; &nbsp; F 1234N56789W &nbsp;USA F15C <br>0036 AS3 CHT 01234 &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp;S 1234N56789W &nbsp;RUS <br>0040 SD1 CMT &nbsp;EE01 &nbsp;PRK 01234 H 1234N56789W &nbsp;RUS MIG29 <br>0045 WD5 KIL &nbsp;EE01 1 KL 01234 H 1234N56789W &nbsp;RUS MIG29 <br>0046 AS3 CHT 01234 &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp;N 1234N56789W <br><br>CONSOLE MESSAGE LOG TD <br>TIME &nbsp;FROM &nbsp;TO &nbsp; MESSAGE &nbsp; &nbsp; &nbsp; &nbsp; LOGGING+ 1A <br>0030 &nbsp; 30 &nbsp; ALL &nbsp;CLEARED SWITCHES <br>0035 &nbsp; 05 &nbsp; W &nbsp; &nbsp;FTRS CHECKING IN <br>0036 &nbsp; 04 &nbsp; MUL &nbsp;SURV RULES, WPNS DROOLS <br>0040 &nbsp; 04 &nbsp; S &nbsp; &nbsp;ONSTATION 1530Z <br>0045 &nbsp; 25 &nbsp; 23&nbsp; &nbsp;READY TO H/O AWAX MON</html>");
+        } else if ("WTH".equals(e.getActionCommand())) {
+        	label.setText("TRK(FCL(\"J,I,A\")),OFF");
+            //label2.setText("");
+        } else if ("HO".equals(e.getActionCommand())) {
+        	label.setText("TRK((\"T\"TKD),OFF)");
+            //label2.setText("");
+        } else if ("COR".equals(e.getActionCommand())) {
+            label.setText("((\"E\"(LALT*UALT)),(AREA((MOD(LALT*UALT)),SIF,\"H\"))(OFF))");
+            label2.setText("<html>CORRIDOR IFF TD <br>CORRIDOR IFF &nbsp; &nbsp; 1B <br># MCODE C ALN &nbsp;ALX <br>E C &nbsp; &nbsp; 2 240 &nbsp;340 <br>1 341XX 1 <br>1 A &nbsp; &nbsp; 2 <br>3 31200 4 <br>9 C &nbsp; &nbsp; 1 180 &nbsp;370 </html>");
+        } else if ("TKM".equals(e.getActionCommand())) {
+        	label.setText("<html>INCL: (AREA(\"I\"(ALL),TRK---)) &nbsp; &nbsp; EXCL: (AREA(\"A,T,B\")(ALL,\"X\"(PID)))+ <br>CEASE: (AREA,TRK---OFF) &nbsp; &nbsp; MSA: (AREA(\"M\"ALT,OFF)) &nbsp; &nbsp; TQ: (AREA(\"Q\"QUAL,OFF))</html>");
+            //label2.setText("");
+        } else if ("ARA".equals(e.getActionCommand())) {
+            label.setText("<html>CREATE/MOVE: (\"M\"AREA)(HOK HOK(HOK)),(CRD CRD(CRD))+ <br>DELETE: AREA---\"D\" &nbsp; &nbsp; DISP: (AREA---,ALL(OFF))+ <br>SLAVE: (\"M\"AREA)\"S\"TRK,\"A\"((HOK HOK (HOK)),(CRD CRD (CRD)),RAD)+ <br>TJ AREA SD: \"J\"(RPT,XRPT,TRK,ALL)(OFF)+ <br>L/A DE: \"R\"((TN)(\"A,L\")(ID(\"X\"))(ALT(ALT)---)(\"W\"WID---)(\"H\"HDG SPD)+ <br>(\"TM\"A*D*E)((HOK,CRD(\"RD\"RAD,(\"SR\",\"EL\"(AO)LG(WD)))),((HOK,CRD)---))(\"N\"))+ <br>L/ADEL:\"R\"TN\"D\" &nbsp; &nbsp; E/D TX:\"R\"TN\"TX\"(OFF) &nbsp; &nbsp; PRTCT: \"R\"TN\"P\"(OFF)+ <br>L/A SUM TD:\"ST\" &nbsp; &nbsp; TD: \"R\"(TN\"TD\",(TN)\"SP,MP\") &nbsp; &nbsp; SD: \"R\"\"SD\"TN,ALL(OFF)</html>");
+            label2.setText("<html>AREA DEFINITION TD <br>AREA &nbsp; DEF &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; 1B<br># WS M &nbsp; DXAHQ &nbsp; I MSA &nbsp;TRK <br>1C &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; 1 &nbsp; &nbsp;AWACS <br>2R &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; + &nbsp; 1 100 0356 <br>3R &nbsp; 15&nbsp; &nbsp; - &nbsp; &nbsp; 1 <br>4R &nbsp;OUT&nbsp; &nbsp; &nbsp; &nbsp; &nbsp; 2 </html>");
+        } else if ("DWN".equals(e.getActionCommand())) {
+        	label.setText("TRK,(\"B\"CUR(OFF))");
+            //label2.setText("");
+        } else if ("CSL".equals(e.getActionCommand())) {
+    		label.setText("<html>ASGN: ((CSL)(TPL OP#(SUBID)(\"I\")(\"P\")),\"A,G,L,N,C,T,V,D,PT\",OFF,+ <br>(\"UU,UA,LA,PU,JU,M2,SL,SH\"(OFF)))+ <br>M/M5: (CSL,ALL)\"M,M5\"(OFF)</html>");
+            //label2.setText("");
+            label2.setText("<html><tr><td>CONSOLE ASSIGNMENT TD <br>&nbsp; &nbsp; &nbsp;CONSOLE ASSIGN <br>CNFN#SN SIPML CNFM#SN SIPML <br>25WD2 &nbsp;&nbsp;BI - &nbsp;05SD1AD BI + <br>21WD3 &nbsp; &nbsp;I &nbsp; &nbsp;30BS1AD BIP- <br>10WD4 &nbsp;&nbsp;BI + &nbsp;07PD1 &nbsp;&nbsp;BIP+ <br>06WD5 &nbsp;&nbsp;BI - &nbsp;14AS5SO BI + <br>01WD6 &nbsp;&nbsp;BI + &nbsp;27AS2SO BI - <br>24WD7 &nbsp;&nbsp;BI + &nbsp;23AS3SO BI + <br>04AS1SO LI + &nbsp;11AS4SO BI - <br>22CO1 &nbsp;&nbsp; &nbsp; &nbsp; &nbsp;33CP1 <br><br><br></td><td>&nbsp; &nbsp; &nbsp; </td><td>AUGMENTED CONSOLE ASSIGNMENT TD <br>&nbsp;CN 05 &nbsp; &nbsp; &nbsp; &nbsp; B<br>&nbsp;WD4 <br>2TJDSN ID=J PU+ <br>3SP=300 D=+ JU+ <br>4TRB=3 TL=+ <br>5RCT=+ CH=- PT- <br>6UASG-UUGN+ M2+ <br>7CRD=L M4= &nbsp;M5+ <br>8ZDY=+ HP=W <br>9L/S=B BM=+ LA+ <br>AMSL=- &nbsp;M=+ SL- <br>BEWI=+ &nbsp;P=- SH+ </td></tr></html>");
+        } else if ("TMC".equals(e.getActionCommand())) {
+            label.setText("(TRK(\"M,V,L,B\"))(\"P\"(\"M,V,L,B\")HOK CUR)");
+            //label2.setText("");
+        } else if ("LSF".equals(e.getActionCommand())) {
+            label.setText("((CHAR(SIF(\"AA\")),((SIF)(\"AA\")OFF)),OFF,(CSL ALL))");
+            label2.setText("<html>LOCATE SIF TD <br>&nbsp;SIF &nbsp; &nbsp; &nbsp; 1C<br><br>2AOR &nbsp; 13X00 <br>3DEAD &nbsp;15100 <br>4E01 &nbsp; 22201 <br>5E02 &nbsp; 22202 <br>6F01 &nbsp;+22231<br>7F02 &nbsp; 22232 <br>8TANK &nbsp;17100 <br>9DN &nbsp; &nbsp;221XX <br>A <br>B </html>");
+        } else if ("RFU".equals(e.getActionCommand())) {
+    		label.setText("<html>REFUEL: DES(\"I\"CRD,HOK)((\"H\"HDG(LGTH)),CRD,HOK)(RAD)(\"N\"DES)(\"R\"RMK)(OFF)+ <br>DISP: (\"T\",OFF) &nbsp; &nbsp; DELETE: DES\"D\"+ <br>ORBITS: \"O\"DES(\"R,C,F\")(CRD,HOK(RAD)(CRD,HOK(RAD)))+ <br>ORBITS DISP: \"O\"(DES,ALL(OFF)) &nbsp; &nbsp; ORBITS DELETE: \"O\"DES,ALL\"D\"</html>");
+            label2.setText("<html>ORBITS TD <br>&nbsp;ORBITS  &nbsp; &nbsp;  &nbsp; &nbsp; 1<br>1 ABQ4 &nbsp; &nbsp; &nbsp;R &nbsp; <br>23401N11227W 15 <br>33401N11315W 15 <br><br>5 ABQ2 &nbsp; &nbsp; &nbsp;F &nbsp; <br>63325N08530W 12 <br>73330N08400W 12 <br><br>9 AW702&nbsp; &nbsp; &nbsp;C &nbsp; <br>A2909N10008W 19 <br>B </html>");
+        } else if ("ARM".equals(e.getActionCommand())) {
+        	label.setText("TRK(((\"S\")(UNITS ARM)---),(\"P\"PARM),(A*B*C*D))");
+            //label2.setText("");
+        } else if ("KIL".equals(e.getActionCommand())) {
+        	label.setText("(TRK)TRK (BDA,#KL)");
+            //label2.setText("");
+        } else if ("INT".equals(e.getActionCommand())) {
+        	label.setText("(\"R\"TRK,AADCP),(TRK(\"P\"))(OFF)");
+            //label2.setText("");
+        } else if ("TKO".equals(e.getActionCommand())) {
+        	label.setText("TRK ALT,OFF");
+            //label2.setText("");
+        } else if ("SIF".equals(e.getActionCommand())) {
+            label.setText("(TRK(MOD,OFF)),(\"S\"SIF),CUR");
+            //label2.setText("");
+        } else if ("RCT".equals(e.getActionCommand())) {
+        	label.setText("(TRK(\"P,T,R,F,C\")),\"P,L,B\",\"O\"(OP#)");
+            //label2.setText("");
+        } else if ("CTK".equals(e.getActionCommand())) {
+        	label.setText("TRK(OFF)");
+            //label2.setText("");
+        } else if ("MOD".equals(e.getActionCommand())) {
+        	label.setText("<html>CONTROL MODE: TRK(\"B,T,C,IC,IM\")+ <br>((\"S+,S-\")(\"T+,T-\")(\"I+,T-\")(\"R+,R-\")),(\"A\"(OFF))");
+            //label2.setText("");
+        } else if ("RQI".equals(e.getActionCommand())) {
+        	label.setText("TRK((\"S\"SIF(\"C\")),(MOD((\"C\")(NET)),\"D\"),((\"C\")(NET)),(\"4,5,B\"\"A,R\"))");
+            //label2.setText("");
+        } else if ("DRP".equals(e.getActionCommand())) {
+    		label.setText("<html>MANUAL: (TRK(\"P\"(OFF))) &nbsp; &nbsp; ONE SHOT: AREA,((\"S,A\")ID)+ <br>ATD: ((\"S,A\")(ID---)ALL(OFF)),(\"TQ\"QUAL,OFF)+ <br>DROP AREA: (\"D\" AREA)</html>");
+            //label2.setText("");
+        } else if ("ALL".equals(e.getActionCommand())) {
+        	label.setText("NO MENU LINE");
+        	label2.setText("NO TD");
+        } else if ("GDN".equals(e.getActionCommand())) {
+        	label.setText("TRK((HDG(\"R,L\"))*ALT*SPD)(OFF)");
+            //label2.setText("");
+        } else if ("ARB".equals(e.getActionCommand())) {
+        	label.setText("MISSION MODIFIER: /(MSNTYP TRK),(\"S\"(TRK(\"I,D\")),ALL(OFF))");
+            //label2.setText("");
+        } else if ("ALC".equals(e.getActionCommand())) {
+        	label.setText("TRK (\"F\",(OFF,(VFQ)(CC*M3))),(\"W\"(OFF)),(\"G\"(VFQ)(CC*M3))");
+            //label2.setText("");
+        } else if ("WIN".equals(e.getActionCommand())) {
+            label.setText("<html>(\"S,A\")(ID)(TKD)(RNS)(NTN)(I)(\"Q\")((\"M\"(\"J,I,A\")),\"EX,ST\")+ <br>(CUR,(HOK CUR),CRD)(H*A*S*T*C)</html>");
+            label2.setText("NO TD");
+        } else if ("OFF".equals(e.getActionCommand())) {
+        	label.setText("NO MENU LINE");
+        	label2.setText("NO TD");
+        } else if ("CMT".equals(e.getActionCommand())) {
+        	label.setText("<html>(TRK,SQN(\"A\"ABID)(\"T\"ACTY)),(\"A\"ABID(\"T\"ACTY)),(\"T\"ACTY) <br>(ATK)(\"F\"FLZ)+ <br>(CSL)(\"G,N\")(\"S+,S-\")(\"I,D\")((\"R\"VCS),OFF)+ <br>(TRK,(\"B\"(\"E\"CUR),(ORB,CUR),(\"S\"STPR,CUR))) <br>MISSION: /(MSNTYP TRK),(\"S\"(TRK(\"I,D\"))ALL(OFF)) <br>RCVY ARB: /ABID</html>");
+            //label2.setText("");
+        } else if ("MSN".equals(e.getActionCommand())) {
+        	label.setText("MISSION MODIFIER: /(MSNTYP TRK),(\"S\"(TRK(\"I,D\")),ALL(OFF))");
+            //label2.setText("");
+        } else if ("CAP".equals(e.getActionCommand())) {
+        	label.setText("<html>(TRK,SQN(\"A\"ABID)(\"T\"ACTY)),(\"A\"ABID(\"T\"ACTY)),(\"T\"ACTY) <br>(\"G,N\")+ <br>(TRK,(\"B\"(\"E\"CUR),(ORB,CUR),(\"S\"CTPR,CUR)))(HDG)</html>");
+            //label2.setText("");
+        } else if ("RTB".equals(e.getActionCommand())) {
+        	label.setText("TRK(\"G,N\")(ABID,REC,(\"B\"(ORB,CUR),(\"S\"STPR,CUR)))");
+            //label2.setText("");
+        } else if ("ARD".equals(e.getActionCommand())) {
+            label.setText("TRK (\"D\",CSL)");
+            label2.setText("NO TD");
+        } else if ("WRN".equals(e.getActionCommand())) {
+    		label.setText("<html>(\"S,A\")(ID)TRK(\"I\"(NAL*CAT*GEN*SPC*MOD*MSN*OPS*ACT),+ <br>(I)(\"M\")(\"EX,ST,SU\")(\"O\")+ <br>(CRD, (HOK,\"H\"CUR))(\"T\"TKD)(\"N\"NTN)(H*A*S*T*C))+ <br>(\"TH\"(TTP*TWP*TFL*MIS1*MIS2*MIS3))</html>");
+    		label2.setText("NO TD");
+        } else if ("HOK".equals(e.getActionCommand())) {
+        	label.setText("NO MENU LINE");
+        	label2.setText("NO TD");
+        } else {
+        	label.setText("PLEASE CHOOSE ANOTHER BUTTON");
+        }
+    	infoBox(label, label2,e.getActionCommand());	
+    }
+ 
+    //creates the pop-up
+    public static void infoBox(JLabel label, JLabel label2, String titleBar)
+    {
+    	JLabel menuLine = setFont(label);
+    	JLabel td = setFont(label2);
+    	
+    	//new frame
+    	JFrame frame = new JFrame();   
+    	
+    	//panel
+    	JTabbedPane tabs = new JTabbedPane();
+    	frame.add(tabs);
+    	frame.pack();
+        frame.setVisible(true); 
+    	
+    	//size       
+        frame.setSize(1400, 700);
+        
+        //tabs
+    	JPanel tab1 = new JPanel();//This will create the first tab
+    	JPanel tab2 = new JPanel();//This will create the second tab
+    	tab1.setLayout(new SpringLayout());
+    	tab2.setLayout(new SpringLayout());
+    	tab1.setBackground(Color.BLACK);
+    	tab2.setBackground(Color.BLACK);
+
+    	//labels
+    	tab1.add(menuLine);
+    	tab2.add(td);
+
+    	//tab headers
+    	tabs.addTab("Menu Line", tab1);
+    	tabs.addTab("TD Example", tab2);
+    }
+    
+    //customizes label
+    public static JLabel setFont(JLabel str) 
+    {
+    	str.setFont(new Font("Courier New", Font.BOLD, 18));
+    	str.setForeground(Color.GREEN);
+    	str.setOpaque(true);
+    	str.setBackground(Color.BLACK);
+    	return str;
+    }
+   
+    //creates interface
+    public static void createAndShowGUI() 
+    {
+    	//frame
+        JFrame frame = new JFrame("Sonoran Study");
+        frame.setDefaultCloseOperation(JFrame.EXIT_ON_CLOSE);
+ 
+        Sonoran newContentPane = new Sonoran();
+        newContentPane.setOpaque(true); 
+        frame.setContentPane(newContentPane);
+ 
+        frame.pack();
+        frame.setVisible(true);   
+        
+        //pane
+        Container contentPane = frame.getContentPane();
+        contentPane.setLayout(new GridLayout(10, 8, 20, 10));
+        
+        frame.setSize(1200, 800);
+        contentPane.setSize(1200, 800);
+    }
+ 
+    //run
+    public static void main(String[] args) 
+      {
+        javax.swing.SwingUtilities.invokeLater(new Runnable() 
+        {
+            public void run() 
+            {
+                createAndShowGUI(); 
+            }
+        });
+    }
+}
