@@ -37,7 +37,7 @@
 			</tr>
 			<tr>
 				<td><button class="button" onclick="RTI()">RCT<br>INIT TD</button></td>
-				<td><button class="button"><br><br></button></td>
+				<td><button class="button" onclick="EMPTY()"><br><br></button></td>
 				<td><button class="button" onclick="RST()">RSTRCTD<br>AREA</button></td>
 				<td><button class="button" onclick="OPC()">OPNL<br>COND TD</button></td>
 				<td><button class="button" onclick="PTD()">PDS TD<br>REQUEST</button></td>
@@ -60,7 +60,7 @@
 				<td><button class="button" onclick="HOQ()">HANDOVR<br>FREQ TD</button></td>
 				<td><button class="button" onclick="CTL()">CONTROL<br>UNIT TD</button></td>
 				<td><button class="button" onclick="FRC()">FORCE<br>TELL</button></td>
-				<td><button class="button"><br><br></button></td>
+				<td><button class="button" onclick="EMPTY()"><br><br></button></td>
 				<td><button class="button" onclick="ACP()">AADCP<br>SD</button></td>
 				<td><button class="button" onclick="ARW()"><br>ARROW</button></td>
 				<td><button class="button" onclick="MSG()"><br>MESSAGE</button></td>
@@ -72,7 +72,7 @@
 				<td><button class="button" onclick="TKM()">AREA<br>MONITOR</button></td>
 				<td><button class="button" onclick="ARA()">AREA<br>DEF/DEL</button></td>
 				<td><button class="button" onclick="DWN()">A/C<br>DOWN</button></td>
-				<td><button class="button">DIALOG<br>TEST</button></td>
+				<td><button class="button" onclick="EMPTY()">DIALOG<br>TEST</button></td>
 				<td><button class="button" onclick="CSL()">ASSIGN<br>CONSOLE</button></td>
 			</tr>
 			<tr>
@@ -88,8 +88,8 @@
 			<tr>
 				<td><button class="button" onclick="RCT()">RCT MSN<br>TD</button></td>
 				<td><button class="button" onclick="CTK()">COMMAND<br>TRKING</button></td>
-				<td><button class="button"><br><br></button></td>
-				<td><button class="button"><br><br></button></td>
+				<td><button class="button" onclick="EMPTY()"><br><br></button></td>
+				<td><button class="button" onclick="EMPTY()"><br><br></button></td>
 				<td><button class="button" onclick="MOD()">RCT MOD<br>CONTROL</button></td>
 				<td><button class="button" onclick="RQI()">REQ/ASG<br>IFF/SIF</button></td>
 				<td><button class="button" onclick="DRP()"><br>DROP</button></td>
@@ -97,9 +97,9 @@
 			</tr>
 			<tr>
 				<td><button class="button" onclick="GDN()">MANUAL<br>GDNC</button></td>
-				<td><button class="button"><br><br></button></td>
-				<td><button class="button"><br><br></button></td>
-				<td><button class="button"><br><br></button></td>
+				<td><button class="button" onclick="EMPTY()"><br><br></button></td>
+				<td><button class="button" onclick="EMPTY()"><br><br></button></td>
+				<td><button class="button" onclick="EMPTY()"><br><br></button></td>
 				<td><button class="button" onclick="ARB()">RCVY<br>AIRBASE</button></td>
 				<td><button class="button" onclick="ALC()">ALTER<br>CONTROL</button></td>
 				<td><button class="button" onclick="WIN()"><br>INIT</button></td>
@@ -110,7 +110,7 @@
 				<td><button class="button" onclick="MSN()"><br>MISSION</button></td>
 				<td><button class="button" onclick="CAP()"><br>CAP</button></td>
 				<td><button class="button" onclick="RTB()"><br>RTB</button></td>
-				<td><button class="button"><br><br></button></td>
+				<td><button class="button" onclick="EMPTY()"><br><br></button></td>
 				<td><button class="button" onclick="ARD()">ASSIGN/<br>DEFER</button></td>
 				<td><button class="button" onclick="WRN()"><br>RE-INIT</button></td>
 				<td><button class="button" onclick="HOK()"><br>HOOK</button></td>
@@ -778,6 +778,15 @@
             function HOK() {
 			document.getElementById("menuLine").innerHTML = "NO MENU LINE";
             document.getElementById("td1").innerHTML = "NO TD";
+            document.getElementById("td2").innerHTML = "";
+            document.getElementById("td3").innerHTML = "";
+            document.getElementById("td4").innerHTML = "";
+            document.getElementById("td5").innerHTML = "";
+            document.getElementById("td6").innerHTML = "";}
+            
+            function EMPTY() {
+			document.getElementById("menuLine").innerHTML = "";
+            document.getElementById("td1").innerHTML = "";
             document.getElementById("td2").innerHTML = "";
             document.getElementById("td3").innerHTML = "";
             document.getElementById("td4").innerHTML = "";
