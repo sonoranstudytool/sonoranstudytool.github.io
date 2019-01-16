@@ -31,7 +31,9 @@
 				<td><button class="button">ORDER<br>BAT SD</button></td>
 				<td><button class="button">SENSOR<br>TRACKING</button></td>
 				<td><button class="button">AIRBASE<br>WX TD</button></td>
-				<td><button class="button">ADD/DEL<br>AIRBASE</button></td>                  		<td><button class="button">HARD<br>COPY</button></td>
+				<td><button class="button">ADD/DEL<br>AIRBASE</button></td>                  		
+
+<td><button class="button">HARD<br>COPY</button></td>
 				<td><button class="button">TD<br>UPDATE</button></td>
 			</tr>
 			<tr>
@@ -122,14 +124,14 @@
         <!--sets each menu line and TD-->
 	<script>
 		function UHF() {
-			document.getElementById("menuLine").innerHTML = "(NUM, \"A, R\", (\"T\"CSL)) <br>ARF: (ROID(\"F\"(NUM FREQ,OFF), (ALL OFF)),(CSL(\"A,B,C,D\")),OFF,\"T\"),(ALL OFF)+ <br>TUN: ((ROID\"I\",((OS)(FREQ)(MODE))),((\"I\")ALL),\"X\")</html>";}
-			document.getElementById("td").innerHTML = "<tr><td>UHF TUNE TD <br>CN#05 DA=D B <br>RADIO RT11 <br>F1 * 253400 <br>F2&nbsp;233800 <br>F3&nbsp;290900 <br>F4&nbsp;267500 <br>F5&nbsp;259300 <br>F6&nbsp;261200 <br><br>&ensp;ASSN FREQ <br>&nbsp; &nbsp; 253400</td><td>&nbsp; &nbsp; &nbsp; </td><td>UHF RADIO TD <br>D CN&nbsp;FREQ A <br>B 10 355125 <br>D 05 254300 <br><br><br><br><br><br><br><br><br></td></tr>";}
+			document.getElementById("menuLine").innerHTML = "(NUM, \"A, R\", (\"T\"CSL)) <br>ARF: (ROID(\"F\"(NUM FREQ,OFF), (ALL OFF)),(CSL(\"A,B,C,D\")),OFF,\"T\"),(ALL OFF)+ <br>TUN: ((ROID\"I\",((OS)(FREQ)(MODE))),((\"I\")ALL),\"X\")";
+            
+			document.getElementById("td").innerHTML = "UHF TUNE TD &nbsp; &nbsp; UHF RADIO TD <br>CN#05 DA=D B &nbsp; &nbsp;D CN&nbsp;FREQ A <br>RADIO RT11 &nbsp; &nbsp; &nbsp;B 10 355125 <br>F1 * 253400 &nbsp; &nbsp; D 05 254300 <br>F2&nbsp;233800 <br>F3&nbsp;290900 <br>F4&nbsp;267500 <br>F5&nbsp;259300 <br>F6&nbsp;261200 <br><br>&ensp;ASSN FREQ <br>&nbsp; &nbsp; 253400";}
 
  		function PDA() {
 			document.getElementById("menuLine").innerHTML = "PDA";}
 	</script>
 	</body>
-
 </html>
 
 
