@@ -14,6 +14,7 @@
 		</style>
 	</head>
 	<body bgcolor="#000000">
+		<!--writes the differe pages 1-4-->
 		<table>
 			<tr>
 				<td><button class="button" onclick="ADIZ()">ADIZ<br>TUNE</button></td>
@@ -22,19 +23,19 @@
 				<td><button class="button" onclick="SEARCHDATA()">SEARCH<br>DATA</button></td>
 			</tr>
 			<tr>
-				<td><button class="button" onclick="AIRSPACE()">AIRSPACE</button></td>
+				<td><button class="button" onclick="AIRSPACE()">AIRSPACE<br></button></td>
 				<td><button class="button" onclick="REMOTEPOINT()">REMOTE<br>POINT</button></td>
 				<td><button class="button" onclick="REMOTESTROBE()">REMOTE<br>STROBE</button></td>
 				<td><button class="button" onclick="SIFDATA()">SIF<br>DATA</button></td>
 			</tr>
 			<tr>
-				<td><button class="button" onclick="USER()">USER</button></td>
+				<td><button class="button" onclick="USER()">USER<br></button></td>
 				<td><button class="button" onclick="FRIENDLYPOINT()">FRIENDLY<br>POINT</button></td>
 				<td><button class="button" onclick="CORRFP()">CORR<br>FP</button></td>
 				<td><button class="button" onclick="HISTORYDATA()">HISTORY<br>DATA</button></td>
 			</tr>
 			<tr>
-				<td><button class="button" onclick="AIRWAY()">AIRWAY</button></td>
+				<td><button class="button" onclick="AIRWAY()">AIRWAY<br></button></td>
 				<td><button class="button" onclick="PPLIPOINT()">PPLI<br>POINT</button></td>
 				<td><button class="button" onclick="UNCORRFP()">UNCORR<br>FP</button></td>
 				<td><button class="button" onclick="LOCALTRK()">LOCAL<br>TRK</button></td>
@@ -46,42 +47,52 @@
 				<td><button class="button" onclick="TOLDINTRK()">TOLD IN<br>TRK</button></td>
 			</tr>
 			<tr>
-				<td><button class="button" onclick="CORIDO()">CORIDO</button></td>
-				<td><button class="button" onclick="UNIT()">UNIT</button></td>
+				<td><button class="button" onclick="CORIDO()">CORIDO<br></button></td>
+				<td><button class="button" onclick="UNIT()">UNIT<br></button></td>
 				<td><button class="button" onclick="SQWKFLASH()">SQWK<br>FLASH</button></td>
 				<td><button class="button" onclick="TDSTRK()">TDS<br>TRK</button></td>
 			</tr>
 			<tr>
 				<td><button class="button" onclick="OTHERAREA()">OTHER<br>AREA</button></td>
-				<td><button class="button" onclick="AB()">AB</button></td>
+				<td><button class="button" onclick="AB()">AB<br></button></td>
 				<td><button class="button" onclick="LOSTBLINK()">LOST<br>BLINK</button></td>
 				<td><button class="button" onclick="JDCSTRK()">JDCS<br>TRK</button></td>
 			</tr>
 			<tr>
-				<td><button class="button" onclick="GEOREFF()">GEOREF</button></td>
-				<td><button class="button" onclick="SS()">SS</button></td>
+				<td><button class="button" onclick="GEOREFF()">GEOREF<br></button></td>
+				<td><button class="button" onclick="SS()">SS<br></button></td>
 				<td><button class="button" onclick="GROUPTRK()">GROUP<br>TRK</button></td>
 				<td><button class="button" onclick="PPLITRK()">PPLI<br>TRK</button></td>
 			</tr>
 			<tr>
-				<td><button class="button" onclick="GDN()">MANUAL<br>GDNC</button></td>
-				<td><button class="button" onclick="EMPTY()"><br><br></button></td>
-				<td><button class="button" onclick="EMPTY()"><br><br></button></td>
-				<td><button class="button" onclick="EMPTY()"><br><br></bton></td>
-				<td><button class="button" onclick="ARB()">RCVY<br>AIRBASE</button></td>
-				<td><button class="button" onclick="ALC()">ALTER<br>CONTROL</button></td>
-				<td><button class="button" onclick="WIN()"><br>INIT</button></td>
-				<td><button class="button" onclick="OFF()"><br>OFF</button></td>
+				<td><button class="button" onclick="PRHIBTAREA()">PRHIBT<br>AREA</button></td>
+				<td><button class="button" onclick="SAMSITE()">SAM<br>SITE</button></td>
+				<td><button class="button" onclick="MONTRK()">MON TRK<br></button></td>
+				<td><button class="button" onclick="BUFFERTRK()">BUFFER<br>TRK</button></td>
 			</tr>
 			<tr>
-				<td><button class="button" onclick="CMT()"><br>COMMIT</button></td>
-				<td><button class="button" onclick="MSN()"><br>MISSION</button></td>
-				<td><button class="button" onclick="CAP()"><br>CAP</button></td>
-				<td><button class="button" onclick="RTB()"><br>RTB</button></td>
+				<td><button class="button" onclick="RESTRICTAREA()">RESTRICT<br>AREA</button></td>
+				<td><button class="button" onclick="MODE5()">MODE 5<br>RES POS</button></td>
 				<td><button class="button" onclick="EMPTY()"><br><br></button></td>
-				<td><button class="button" onclick="ARD()">ASSIGN/<br>DEFER</button></td>
-				<td><button class="button" onclick="WRN()"><br>RE-INIT</button></td>
-				<td><button class="button" onclick="HOK()"><br>HOOK</button></td>
+				<td><button class="button" onclick="SAMTRK()">SAM<br>TRK</button></td>
+			</tr>
+				<tr>
+				<td><button class="button" onclick="TELLZONE()">TELL<br>ZONE</button></td>
+				<td><button class="button" onclick="AUTOIDAREA()">AUTO ID<br>AREA</button></td>
+				<td><button class="button" onclick="WRL()">WRL<br></button></td>
+				<td><button class="button" onclick="SFTRK()">SF<br>TRK</button></td>
+			</tr>
+			<tr>
+				<td><button class="button" onclick="ALLZONE()">ALL<br>ZONE</button></td>
+				<td><button class="button" onclick="EMGTAREA()">EMGT<br>AREA</button></td>
+				<td><button class="button" onclick="COMBATAREA()">COMBAT<br>AREA</button></td>
+				<td><button class="button" onclick="HOOKTRKONLY()">HOOK TRK<br>ONLY</button></td>
+			</tr>
+			<tr>
+				<td><button class="button" onclick="PAGE1()">AE 1 PAGE 1<br></button></td>
+				<td><button class="button" onclick="PAGE2()">AE 2 PAGE 2<br></button></td>
+				<td><button class="button" onclick="PAGE3()">CATE PAGE 3<br><br></button></td>
+				<td><button class="button" onclick="PAGE4()">CATE PAGE 4<br></button></td>
 			</tr>
 		</table>
 	<!--writes the menu lines and TDs-->
